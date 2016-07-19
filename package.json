@@ -1,26 +1,27 @@
 {
-  "name": "jsonresume-theme-elegant",
-  "version": "1.6.10",
-  "description": "Elegant theme for jsonresume",
+  "name": "jsonresume-theme-simplyelegant",
+  "version": "1.7.1",
+  "description": "SimplyElegant theme for jsonresume (fork of jsonresume-theme-elegant)",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/mudassir0909/jsonresume-theme-elegant.git"
+    "url": "https://github.com/skoberlink/jsonresume-theme-simplyelegant.git"
   },
   "keywords": [
     "jsonresume",
     "theme",
-    "elegant"
+    "elegant",
+    "simply"
   ],
-  "author": "Mudassir Ali <mudassir.dev@gmail.com>",
+  "author": "Skoberlink <skoberlink@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mudassir0909/jsonresume-theme-elegant/issues"
+    "url": "https://github.com/skoberlink/jsonresume-theme-simplyelegant/issues"
   },
-  "homepage": "https://github.com/mudassir0909/jsonresume-theme-elegant",
+  "homepage": "https://github.com/skoberlink/jsonresume-theme-simplyelegant",
   "dependencies": {
     "gravatar": "^1.0.6",
     "handlebars": "^2.0.0-alpha.4",

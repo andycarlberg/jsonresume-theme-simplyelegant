@@ -1,8 +1,8 @@
 mixin profile_card_detail(icon, info, itemprop, icon_title)
   .detail
-    span.icon(title=icon_title)
+    .icon(title=icon_title)
       i.icon.fs-lg(class=icon)
-    span.info(itemprop=itemprop)
+    .info(itemprop=itemprop)
       if block
         block
       else
@@ -15,10 +15,9 @@ mixin render_links(profiles)
       target="_blank",
       data-toggle="tooltip",
       title= resume.basics.name + " on " + profile.network,
-      class="link-" + profile.label + " icon-" + profile.label)
-      if profile.network.toLowerCase() == 'meetup'
-        span.path2
-        span.path3
+      class="link-" + profile.label)
+      span(class="icon-" + profile.label)
+      span.social-link-url()= profile.url
 
 section.col-md-3.card-wrapper.profile-card-wrapper.affix
   .card.profile-card

@@ -1,4 +1,8 @@
 @media print {
+    body {
+      font-family: 'Roboto';
+    }
+
     a[href]:after {
         content: none !important;
     }
@@ -23,7 +27,8 @@
 
     .contact-details {
         .detail {
-            .make-xs-column(3);
+            .make-xs-column(6);
+            height: auto;
             padding: 0;
         }
     }

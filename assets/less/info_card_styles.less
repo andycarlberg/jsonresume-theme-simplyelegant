@@ -28,13 +28,17 @@
 }
 
 .contact-details {
+    .make-row();
+
     @media (max-width: @screen-tablet) {
         text-align: center;
     }
 
     .detail {
-        display: table;
-        padding: 10px 0;
+        .make-sm-column(6);
+        height: 50px;
+        margin: 5px 0;
+        text-align: center;
 
         .icon {
             padding: 0 10px;
@@ -47,20 +51,15 @@
 
         .info {
             font-size: 0.8em;
+            padding: 0 10px;
         }
 
         .icon, .info {
-            display: table-cell;
             vertical-align: middle;
         }
 
-        @media (max-width: @screen-tablet) {
-            .make-xs-column(12);
-        }
-
         @media (max-width: @screen-desktop) {
-            .make-sm-column(3);
-            padding: 10px;
+            height: auto;
 
             .icon, .info {
                 display: inline-block;
@@ -70,7 +69,7 @@
 }
 
 .social-links {
-    line-height: 2.5;
+    line-height: 1;
 }
 
 .social-link {
@@ -84,6 +83,16 @@
 
     &:hover {
         text-decoration: none;
+    }
+
+    span {
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    .social-link-url {
+      font-size: 0.5em;
+      margin-left: 5px;
     }
 }
 

@@ -224,11 +224,12 @@
 }
 .label-keyword {
   display: inline-block;
-  background: #7eb0db;
-  color: white;
+  color: black;
   font-size: 0.9em;
+  font-weight: normal;
+  border: none;
+  border-radius: 0;
   padding: 5px;
-  border: 1px solid #357ebd;
   margin-right: 5px;
 }
 .label-keyword:last-child {
@@ -272,7 +273,7 @@
   outline: none !important;
 }
 body {
-  font-family: 'Lato';
+  font-family: 'Roboto Condensed';
   background: #f0f0f0;
   color: #333333;
 }
@@ -529,14 +530,29 @@ body {
     margin-top: 10px;
   }
 }
+.contact-details {
+  margin-left: -15px;
+  margin-right: -15px;
+}
 @media (max-width: 768px) {
   .contact-details {
     text-align: center;
   }
 }
 .contact-details .detail {
-  display: table;
-  padding: 10px 0;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  height: 50px;
+  margin: 5px 0;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .contact-details .detail {
+    float: left;
+    width: 50%;
+  }
 }
 .contact-details .detail .icon {
   padding: 0 10px;
@@ -549,43 +565,23 @@ body {
 }
 .contact-details .detail .info {
   font-size: 0.8em;
+  padding: 0 10px;
 }
 .contact-details .detail .icon,
 .contact-details .detail .info {
-  display: table-cell;
   vertical-align: middle;
-}
-@media (max-width: 768px) {
-  .contact-details .detail {
-    position: relative;
-    float: left;
-    width: 100%;
-    min-height: 1px;
-    padding-left: 15px;
-    padding-right: 15px;
-  }
 }
 @media (max-width: 992px) {
   .contact-details .detail {
-    position: relative;
-    min-height: 1px;
-    padding-left: 15px;
-    padding-right: 15px;
-    padding: 10px;
+    height: auto;
   }
   .contact-details .detail .icon,
   .contact-details .detail .info {
     display: inline-block;
   }
 }
-@media (max-width: 992px) and (min-width: 768px) {
-  .contact-details .detail {
-    float: left;
-    width: 25%;
-  }
-}
 .social-links {
-  line-height: 2.5;
+  line-height: 1;
 }
 .social-link {
   margin-left: 5px;
@@ -597,6 +593,14 @@ body {
 }
 .social-link:hover {
   text-decoration: none;
+}
+.social-link span {
+  display: inline-block;
+  vertical-align: middle;
+}
+.social-link .social-link-url {
+  font-size: 0.5em;
+  margin-left: 5px;
 }
 .link-github {
   color: #454545;
@@ -890,6 +894,9 @@ body {
   margin-left: 0;
 }
 @media print {
+  body {
+    font-family: 'Roboto';
+  }
   a[href]:after {
     content: none !important;
   }
@@ -911,10 +918,11 @@ body {
   .contact-details .detail {
     position: relative;
     float: left;
-    width: 25%;
+    width: 50%;
     min-height: 1px;
     padding-left: 15px;
     padding-right: 15px;
+    height: auto;
     padding: 0;
   }
   .floating-nav,
